@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>じゃいすと LT 資料</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div class="reveal"> 
+<div class="slides">
+
+<section data-markdown>
+<script type="text/template">
+# じゃいすとLT
+## オフィスのいらないオフィス環境
+
+by qh73xe
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+# 今回の発表の目的
+
+* MS がなくても生きて行ける道を模索する
+* 今回は特にパワポ関係でお話します
+    * 日常の中にスクリプティングを入れていく
+    * フリーである凄さを見せる
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# アジェンダ
+
+* js とは何か？
+* Office とは何か？
+* reveal.js の簡単な紹介
+* reveal.js ハンズオン
+* D3.js の簡単な紹介
+* D3.js ハンズオン
+</script>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Q. JS とは何か?
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+##A. JavaScript =  web 系の開発言語？
+<div Align="right"><h3>ではなく</h3></div> 
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## JavaScript = DOM を操作する言語
+DOM : マークアップで文章の形式を記述する文章形式
+
+- ex) xml, html, pdf, ps, svg
+    - いわゆるベクター形式の図はここに入ります
+</script>
+</section>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+#Q. office とは何か
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+#A. DOM の</br>統合開発環境
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 少し実例: Libre Office
+
+![オフィスのファイルはDOM である](./fig/DOM.png)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## やり方
+
+    - Libre Office で適当なファイルを作成
+    - 適当な場所に保存
+    - zip が解凍できるアプリケーションで展開
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# つまり，Office とは
+- GUI を使って DOM ファイルを作成し : エディタ
+- 解釈のルールを決め : プログラミング言語
+- それを表示しているに過ぎない : ビューワー
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 今回の構成
+
+- エディタ ： 好きなもの（私はvim）
+- プログラミング言語 : js (reveal.js)
+- ビュワー : モダンブラウザ
+</script>
+</section>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# reveal.js
+- 公式サイト : http://lab.hakim.se/reveal-js/#/
+- github : https://github.com/hakimel/reveal.js/
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+# メリット
+- スライドの中身に集中できる
+- 表現の可能性が無限大
+- md 形式でかける
+- github 連携が楽
+- シンタックスハイライトが便利
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# デメリット
+- 文字を書く量は増える
+- 微調整は難しい
+- **教授に提出できない...**
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# HTML + js スライドの可能性
+
+- prezi (web app) : [公式サイト](http://prezi.com/business-8/?gclid=CjwKEAjw9uypBRD5pMDYtsKxvXcSJACcb9AYBTHumbSLVbLbrcEZ28oqOJru5KhwEe_WgOLtfdVlLRoCfo7w_wcB), [デモ](http://prezi.com/ey6adrxanqnl/?utm_campaign=share&utm_medium=copy&rc=ex0share)
+- impress.js : [公式サイト](https://github.com/bartaz/impress.js/), [デモ](http://bartaz.github.io/impress.js/#/bored)
+- html5slides : [公式サイト](https://code.google.com/p/html5slides/), [デモ](http://html5slides.googlecode.com/svn/trunk/template/index.html#1)
+</script>
+</section>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# やってみよう
+- github からソースファイルをクローン
+- index.html を見てみる
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## 基本的な記法
+
+スライドを作成するには以下のように書けば OK です
+
+```
+<section>
+この section 内に好きなように HTML を書けばよい
+</section>
+```
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## アニメーション
+
+```
+<p class="fragment grow">grow</p>
+<p class="fragment shrink">shrink</p>
+<p class="fragment roll-in">roll-in</p>
+<p class="fragment fade-out">fade-out</p>
+<p class="fragment current-visible">current-visible</p>
+<p class="fragment highlight-red">highlight-red</p>
+<p class="fragment highlight-blue">highlight-blue</p>
+```
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## Markdown
+
+```
+<section data-markdown>
+  ## Markdown でスライドの可能
+
+  独自記法の拡張もできます
+</section>
+
+```
+
+- 何か困った場合，その部分のみ HTML を直書きできます
+    - CSS でなんとかしたい時とか
+    - 他の js との連携で div に class を宣言したいときとか
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+# まあちょっとヤッてみてください．
+</script>
+</section>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# D3.js
+## データビジュアリゼーション
+</script>
+</section>
+
+<section>
+<h3>実例</h3>
+<iframe src="http://d3.artzub.com/wbca/" width="90%" height="500"></iframe>
+</section>
+
+<section>
+<h3>実例</h3>
+<iframe src="http://jsrun.it/hunayasu/7A9o/" width="90%" height="500"></iframe>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+# D3 を使うと
+
+- 今まさにのデータを
+- 動的な動きを含めて
+- インタラクティブに操作可能
+
+## reveal.js と組み合わせれば
+# Talk のような トークができるスライドに
+</script>
+</section>
+</section>
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# やってみよう
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 散布図
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## データの読み込み
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## アニメーション
+</script>
+</section>
+</section>
+
+
+</div> </div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // Optional reveal.js plugins
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  });
+</script>
+
+</body>
+</html>
