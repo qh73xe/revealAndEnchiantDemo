@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D3.js サンプル</title>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+<h1>D3.jsサンプル</h1>
+
+<script>
+d3.csv('iris.csv', function(iris){
+    var w = 700;
+    var h = 400;
+    var svg = d3.select('body')
+                .append('svg')
+                .attr("width", w)
+                .attr("height", h);
+
+    svg.append("rect")
+       .attr("width", "100%")
+       .attr("height", "100%")
+       .attr("fill", "#fdf6e3");
+
+    svg.selectAll("circle")  // 円を選択
+      .data(iris)         // データを当てはめる
+      .enter()
+      .append("circle")      // 実際に円をhtmlに追加
+      .attr({                // 円の細かい設定は以下の通り
+        cx : function(d) {return d['SepalLength'] * 200 - 860},
+        cy : function(d) {return d['SepalWidth'] * 150 - 300},
+        fill : 'black',
+        r : 3,
+      })
+      .on("click",function(){
+          svg.selectAll('circle').transition().duration(1000)
+             .attr({
+               r : 6,
+               fill: function(d) {
+                   var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+                   return colors[d['Species']]
+               },
+             });
+          });
+});
+</script>
+</body>
+</html>
+
+

@@ -28,6 +28,8 @@
 <div class="reveal"> 
 <div class="slides">
 
+
+<section>
 <section data-markdown>
 <script type="text/template">
 # じゃいすとLT
@@ -38,15 +40,33 @@ by qh73xe
 </script>
 </section>
 
-
 <section data-markdown>
 <script type="text/template">
-# 今回の発表の目的
+## そういえば
+### connpass すごいですね<!-- .element: class="fragment" data-fragment-index="1" -->
+### 4 人も外部の人が登録しました<!-- .element: class="fragment" data-fragment-index="2" -->
 
-* MS がなくても生きて行ける道を模索する
-* 今回は特にパワポ関係でお話します
-    * 日常の中にスクリプティングを入れていく
-    * フリーである凄さを見せる
+基本,内部イベントであること明記しましょう!!<!-- .element: class="fragment" data-fragment-index="3" -->
+</script>
+</section>
+</section>
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# さて
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+# オフィスのいらないオフィス環境
+## 今回の発表の目的
+
+* MS がなくても生きて行ける道を模索する<!-- .element: class="fragment" data-fragment-index="1" -->
+* 今回は特にパワポ関係でお話します<!-- .element: class="fragment" data-fragment-index="2" -->
+    * 日常の中にスクリプティングを入れていく<!-- .element: class="fragment" data-fragment-index="3" -->
+    * フリーである凄さを見せる<!-- .element: class="fragment" data-fragment-index="3" -->
+
 </script>
 </section>
 
@@ -62,27 +82,26 @@ by qh73xe
 * D3.js ハンズオン
 </script>
 </section>
-
+</section>
 
 <section>
 <section data-markdown>
 <script type="text/template">
-# Q. JS とは何か?
+# Q. JavaScript?
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
-##A. JavaScript =  web 系の開発言語？
-<div Align="right"><h3>ではなく</h3></div> 
+##A. JavaScript =  何か web のやつ??
+<div Align="right"><h3>...ではなく</h3></div><!-- .element: class="fragment" data-fragment-index="1" -->
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
 ## JavaScript = DOM を操作する言語
-DOM : マークアップで文章の形式を記述する文章形式
-
-- ex) xml, html, pdf, ps, svg
-    - いわゆるベクター形式の図はここに入ります
+DOM : マークアップで文章の形式を記述する文章形式<!-- .element: class="fragment" data-fragment-index="1" -->
+- ex) xml, html, pdf, ps, svg <!-- .element: class="fragment" data-fragment-index="2" -->
+    - ベクター形式の図も<!-- .element: class="fragment" data-fragment-index="2" -->
 </script>
 </section>
 </section>
@@ -91,12 +110,18 @@ DOM : マークアップで文章の形式を記述する文章形式
 <section>
 <section data-markdown>
 <script type="text/template">
-#Q. office とは何か
+# Q. office とは??
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
-#A. DOM の</br>統合開発環境
+# A. 文章とか作成するやつでしょ？？
+<div Align="right"><h3>...でもなくて</h3></div><!-- .element: class="fragment" data-fragment-index="1" -->
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+# A. DOM の</br>統合開発環境
 </script>
 </section>
 
@@ -104,7 +129,10 @@ DOM : マークアップで文章の形式を記述する文章形式
 <script type="text/template">
 ## 少し実例: Libre Office
 
-![オフィスのファイルはDOM である](./fig/DOM.png)
+.odt は zip ファイルだった...
+
+![オフィスのファイルはDOM である](./fig/DOM.png)<!-- .element: class="fragment" data-fragment-index="1" -->
+
 </script>
 </section>
 
@@ -122,9 +150,9 @@ DOM : マークアップで文章の形式を記述する文章形式
 <section data-markdown>
 <script type="text/template">
 # つまり，Office とは
-- GUI を使って DOM ファイルを作成し : エディタ
-- 解釈のルールを決め : プログラミング言語
-- それを表示しているに過ぎない : ビューワー
+- GUI を使って DOM ファイルを作成し : エディタ<!-- .element: class="fragment" data-fragment-index="1" -->
+- 解釈のルールを決め : プログラミング言語<!-- .element: class="fragment" data-fragment-index="2" -->
+- それを表示しているに過ぎない : ビューワー<!-- .element: class="fragment" data-fragment-index="3" -->
 </script>
 </section>
 
@@ -135,6 +163,8 @@ DOM : マークアップで文章の形式を記述する文章形式
 - エディタ ： 好きなもの（私はvim）
 - プログラミング言語 : js (reveal.js)
 - ビュワー : モダンブラウザ
+
+# じゃー，いってみよう<!-- .element: class="fragment" data-fragment-index="1" -->
 </script>
 </section>
 </section>
@@ -146,25 +176,27 @@ DOM : マークアップで文章の形式を記述する文章形式
 # reveal.js
 - 公式サイト : http://lab.hakim.se/reveal-js/#/
 - github : https://github.com/hakimel/reveal.js/
+
+html スライドを作成するための js ライブラリ
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
 # メリット
-- スライドの中身に集中できる
-- 表現の可能性が無限大
-- md 形式でかける
-- github 連携が楽
-- シンタックスハイライトが便利
+- スライドの中身に集中できる<!-- .element: class="fragment" data-fragment-index="1" -->
+- 表現の可能性が無限大<!-- .element: class="fragment" data-fragment-index="2" -->
+- md 形式でかける<!-- .element: class="fragment" data-fragment-index="3" -->
+- github 連携が楽<!-- .element: class="fragment" data-fragment-index="4" -->
+- シンタックスハイライトが便利<!-- .element: class="fragment" data-fragment-index="5" -->
 </script>
 </section>
 
 <section data-markdown>
 <script type="text/template">
 # デメリット
-- 文字を書く量は増える
-- 微調整は難しい
-- **教授に提出できない...**
+- 文字を書く量は増える<!-- .element: class="fragment" data-fragment-index="1" -->
+- 微調整は難しい<!-- .element: class="fragment" data-fragment-index="2" -->
+- 教授に提出できない... <!-- .element: class="fragment" data-fragment-index="3" -->
 </script>
 </section>
 
@@ -179,11 +211,15 @@ DOM : マークアップで文章の形式を記述する文章形式
 </section>
 </section>
 
-
 <section>
 <section data-markdown>
 <script type="text/template">
 # やってみよう
+
+今回は私の github レポジトリの中に reveal_demo というディレクトリを作成しています．
+
+この中に書いて行きましょう
+
 - github からソースファイルをクローン
 - index.html を見てみる
 </script>
@@ -233,12 +269,11 @@ DOM : マークアップで文章の形式を記述する文章形式
 
   独自記法の拡張もできます
 </section>
-
 ```
 
 - 何か困った場合，その部分のみ HTML を直書きできます
     - CSS でなんとかしたい時とか
-    - 他の js との連携で div に class を宣言したいときとか
+    - 他の js との連携で div に class を宣言するときとか
 
 </script>
 </section>
@@ -272,14 +307,17 @@ DOM : マークアップで文章の形式を記述する文章形式
 
 <section data-markdown>
 <script type="text/template">
-# D3 を使うと
+# D3.js を使うと
 
 - 今まさにのデータを
+<!-- .element: class="fragment" data-fragment-index="1" -->
 - 動的な動きを含めて
+<!-- .element: class="fragment" data-fragment-index="2" -->
 - インタラクティブに操作可能
+<!-- .element: class="fragment" data-fragment-index="3" -->
 
-## reveal.js と組み合わせれば
-# Talk のような トークができるスライドに
+## reveal.js と組み合わせれば<!-- .element: class="fragment" data-fragment-index="4" -->
+# Talk のような トークができるスライドに<!-- .element: class="fragment" data-fragment-index="5" -->
 </script>
 </section>
 </section>
@@ -288,28 +326,216 @@ DOM : マークアップで文章の形式を記述する文章形式
 <section data-markdown>
 <script type="text/template">
 # やってみよう
+
+- 今回は公式の公開パスへのリンクを直書き
+- head に以下のパスを記述
+
+```
+<html>
+<head>
+<meta charset="utf-8">
+<title>D3.js サンプル</title>
+<ｓcript src="http://d3js.org/d3.v3.min.js" charset="utf-8"></ｓcript>
+</head>
+
+<body>
+<h1>D3.jsサンプル</h1>
+
+<ｓcript>
+ここにコードを書きます
+</ｓcript>
+</body>
+</html>
+```
+
+
+</script>
+</section>
+
+
+<section>
+<h2> 散布図 </h2>
+
+<div id="ex1"></div>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+
+## データの宣言
+
+```
+var dataset = [
+  [   5,   150 ],
+  [ 480,   300 ],
+  [ 250,   400 ],
+  [ 100,   330 ],
+  [ 330,   50 ],
+  [ 410,   120 ],
+  [ 475,   340 ],
+  [  25,   470 ],
+  [  85,   210 ],
+  [ 220,   380 ]];
+```
+
 </script>
 </section>
 
 <section data-markdown>
 <script type="text/template">
-## 散布図
+
+## 描画領域の指定
+
+```
+var svg = d3.select(".ex1")
+    .append("svg")
+    .attr("width", 700)
+    .attr("height", 500);
+    .selectAll("circle")  // 円を選択
+    .data(dataset)         // データを当てはめる
+    .enter()
+    .append("circle")      // 実際に円をhtmlに追加
+    .attr({                // 円の細かい設定は以下の通り
+      cx : function(d) {return d[0]},
+      cy : function(d) {return d[1]},
+      r : 10,
+    })
+```
+
 </script>
+</section>
+
+
+<section>
+<h2>データの読み込み<h2>
+
+<li>iris.csv を使用</li>
+
+<div id="ex2"></div>
 </section>
 
 <section data-markdown>
 <script type="text/template">
-## データの読み込み
+## サンプルコード
+```
+d3.csv('./iris.csv', function(iris){
+    d3.select('body')
+      .append('svg')
+      .attr("width", 700)
+      .attr("height", 400)
+      .selectAll("circle")  // 円を選択
+      .data(iris)         // データを当てはめる
+      .enter()
+      .append("circle")      // 実際に円をhtmlに追加
+      .attr({                // 円の細かい設定は以下の通り
+        cx : function(d) {return d['SepalLength'] * 200 - 860},
+        cy : function(d) {return d['SepalWidth'] * 150 - 300},
+        r : 3,
+        fill: function(d) {
+            var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+            return colors[d['Species']]
+        }
+      });
+});
+```
 </script>
 </section>
 
+<section>
+<h2>アニメーション</h2>
+<h3> .transition() </h3>
+<h3> .delay(待ち時間) </h3>
+<h3> .duration(変化時間) </h3>
+
+</section>
+
+<section>
+<div id = "ex3"></div>
+</section>
+<section data-markdown>
+<script type="text/template">
+## サンプルコード
+
+```
+svg.selectAll("circle")  // 円を選択
+  .data(iris)         // データを当てはめる
+  .enter()
+  .append("circle")      // 実際に円をhtmlに追加
+  .attr({                // 円の細かい設定は以下の通り
+    cx : function(d) {return d['SepalLength'] * 200 - 860},
+    cy : function(d) {return d['SepalWidth'] * 150 - 300},
+    fill : 'black',
+    r : 3,
+  })
+  .transition().delay(500).duration(1000)
+  .attr({
+    r : 6,
+    fill: function(d) {
+        var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+        return colors[d['Species']]
+    },
+  });
+```
+</script>
+</section>
 <section data-markdown>
 <script type="text/template">
 ## アニメーション
+### on()
+</script>
+</section>
+
+<section>
+<div id = "ex4"></div>
+</section>
+<section data-markdown>
+<script type="text/template">
+## サンプルコード
+
+```
+svg.selectAll("circle")  // 円を選択
+   .data(iris)         // データを当てはめる
+   .enter()
+   .append("circle")      // 実際に円をhtmlに追加
+   .attr({                // 円の細かい設定は以下の通り
+     cx : function(d) {return d['SepalLength'] * 200 - 860},
+     cy : function(d) {return d['SepalWidth'] * 150 - 300},
+     fill : 'black',
+     r : 3,
+   })
+   .on("click",function(){
+      svg.selectAll('circle').transition().duration(1000)
+         .attr({
+           r : 6,
+           fill: function(d) {
+               var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+               return colors[d['Species']]
+           },
+         });
+      });
+
+```
 </script>
 </section>
 </section>
 
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# まとめ
+### Office 系のアプリ -> DOM 編集<!-- .element: class="fragment" data-fragment-index="1" -->
+### JavaScript を使うと可能性が広がる<!-- .element: class="fragment" data-fragment-index="2" -->
+#### reveal.js : スライド作成<!-- .element: class="fragment" data-fragment-index="3" -->
+#### D3.js : データの可視化を自在にできる<!-- .element: class="fragment" data-fragment-index="4" -->
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+# えんじょい !!
+</script>
+</section>
+</section>
 
 </div> </div>
 <script src="lib/js/head.min.js"></script>
@@ -333,5 +559,144 @@ DOM : マークアップで文章の形式を記述する文章形式
   });
 </script>
 
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+/* データの宣言 */
+var dataset = [
+  [   5,   150 ],
+  [ 480,   300 ],
+  [ 250,   400 ],
+  [ 100,   330 ],
+  [ 330,   50 ],
+  [ 410,   120 ],
+  [ 475,   340 ],
+  [  25,   140 ],
+  [  85,   210 ],
+  [ 220,   380 ]];
+
+/* 描画領域の指定 */
+var svg = d3.select("#ex1")
+    .append("svg")
+    .attr("width", 700)
+    .attr("height", 400);
+
+svg.append("rect")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("fill", "#fdf6e3");
+
+/* データの描画 */
+svg.selectAll("circle")  // 円を選択
+  .data(dataset)         // データを当てはめる
+  .enter()
+  .append("circle")      // 実際に円をhtmlに追加
+  .attr({                // 円の細かい設定は以下の通り
+    cx : function(d) {return d[0]},
+    cy : function(d) {return d[1]},
+    r : 10,
+  });
+</script>
+
+<script>
+d3.csv('./iris.csv', function(iris){
+    var w = 700;
+    var h = 400;
+    var svg = d3.select('#ex2')
+                .append('svg')
+                .attr("width", w)
+                .attr("height", h);
+
+    svg.append("rect")
+       .attr("width", "100%")
+       .attr("height", "100%")
+       .attr("fill", "#fdf6e3");
+
+    svg.selectAll("circle")  // 円を選択
+      .data(iris)         // データを当てはめる
+      .enter()
+      .append("circle")      // 実際に円をhtmlに追加
+      .attr({                // 円の細かい設定は以下の通り
+        cx : function(d) {return d['SepalLength'] * 200 - 860},
+        cy : function(d) {return d['SepalWidth'] * 150 - 300},
+        fill: function(d) {
+            var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+            return colors[d['Species']]
+        },
+        r : 3,
+      });
+});
+</script>
+
+<script>
+d3.csv('./iris.csv', function(iris){
+    var w = 700;
+    var h = 400;
+    var svg = d3.select('#ex3')
+                .append('svg')
+                .attr("width", w)
+                .attr("height", h);
+
+    svg.append("rect")
+       .attr("width", "100%")
+       .attr("height", "100%")
+       .attr("fill", "#fdf6e3");
+
+    svg.selectAll("circle")  // 円を選択
+      .data(iris)         // データを当てはめる
+      .enter()
+      .append("circle")      // 実際に円をhtmlに追加
+      .attr({                // 円の細かい設定は以下の通り
+        cx : function(d) {return d['SepalLength'] * 200 - 860},
+        cy : function(d) {return d['SepalWidth'] * 150 - 300},
+        fill : 'black',
+        r : 3,
+      })
+      .transition().delay(500).duration(1000)
+      .attr({
+        r : 6,
+        fill: function(d) {
+            var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+            return colors[d['Species']]
+        },
+      });
+});
+</script>
+
+<script>
+d3.csv('./iris.csv', function(iris){
+    var w = 700;
+    var h = 400;
+    var svg = d3.select('#ex4')
+                .append('svg')
+                .attr("width", w)
+                .attr("height", h);
+
+    svg.append("rect")
+       .attr("width", "100%")
+       .attr("height", "100%")
+       .attr("fill", "#fdf6e3");
+
+    svg.selectAll("circle")  // 円を選択
+      .data(iris)         // データを当てはめる
+      .enter()
+      .append("circle")      // 実際に円をhtmlに追加
+      .attr({                // 円の細かい設定は以下の通り
+        cx : function(d) {return d['SepalLength'] * 200 - 860},
+        cy : function(d) {return d['SepalWidth'] * 150 - 300},
+        fill : 'black',
+        r : 3,
+      })
+      .on("click",function(){
+          svg.selectAll('circle').transition().duration(1000)
+             .attr({
+               r : 6,
+               fill: function(d) {
+                   var colors = {setosa: '#dc322f', virginica: '#268bd2', versicolor: '#b58900'};
+                   return colors[d['Species']]
+               },
+             });
+          });
+});
+</script>
 </body>
 </html>

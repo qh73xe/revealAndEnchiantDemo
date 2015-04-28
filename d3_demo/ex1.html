@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D3.js サンプル</title>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+<h1>D3.jsサンプル</h1>
+
+<script>
+/* データの宣言 */
+var dataset = [
+  [   5,   150 ],
+  [ 480,   300 ],
+  [ 250,   400 ],
+  [ 100,   330 ],
+  [ 330,   50 ],
+  [ 410,   120 ],
+  [ 475,   340 ],
+  [  25,   470 ],
+  [  85,   210 ],
+  [ 220,   380 ]];
+
+/* 描画領域の指定 */
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", 1000)
+    .attr("height", 1000);
+
+/* データの描画 */
+svg.selectAll("circle")  // 円を選択
+  .data(dataset)         // データを当てはめる
+  .enter()               
+  .append("circle")      // 実際に円をhtmlに追加
+  .attr({                // 円の細かい設定は以下の通り
+    cx : function(d) {return d[0]},
+    cy : function(d) {return d[1]},
+    r : 10,
+  })
+</script>
+
+</body>
+</html>
+
+
