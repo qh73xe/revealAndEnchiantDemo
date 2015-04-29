@@ -49,6 +49,47 @@ by qh73xe
 基本,内部イベントであること明記しましょう!!<!-- .element: class="fragment" data-fragment-index="3" -->
 </script>
 </section>
+
+<section data-markdown>
+<script type="text/template">
+# 最近の興味
+
+## crul + jq  <!-- .element: class="fragment" data-fragment-index="1" -->
+
+API 使えるスクレイピングだったらすごい楽かも<!-- .element: class="fragment" data-fragment-index="2" -->
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+### サンプルコード
+日本で発売されたエリックサティの楽曲を取得
+
+```
+$ curl 'http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ \
+        wa/wsSearch?term=エリック サティ& \
+        country=JP&entity=musicTrack' \
+| jq ".results[].trackName"
+```
+
+結果
+
+```
+"ジムノペディ第1番"
+"Gnossienne No. 1"
+"ジムノペディ第2番"
+"ジムノペディ第3番"
+ 
+以下省略
+```
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## こんど スクレイピング勉強会とかもやりたいかも...
+</script>
+</section>
 </section>
 
 <section>
@@ -236,6 +277,8 @@ html スライドを作成するための js ライブラリ
 <section>
 この section 内に好きなように HTML を書けばよい
 </section>
+
+- snipet が使える環境だったら適当に作成しておくと楽です
 ```
 
 </script>
